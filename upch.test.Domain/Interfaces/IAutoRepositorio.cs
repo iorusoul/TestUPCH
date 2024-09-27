@@ -7,7 +7,7 @@ namespace upch.test.Domain.Interfaces
     {
         public ValueTask<Auto?> Crear(Auto? _nuevoAuto);
         public ValueTask<Auto?> ObtenerAuto(int _id);
-        public ValueTask<int> ActualizarAuto(DTOAuto _dto);
+        public ValueTask<int> ActualizarAuto(Auto _dto);
         public ValueTask<bool> EliminarAuto(int Id);
     }
 }
