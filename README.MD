@@ -20,7 +20,23 @@ El proyecto ha sido creado utilizando el patron CQRS respetando los principios s
 La api esta desplegada en AWS con las rutas especificadas en los archivos postman y 2 environment, si estas ejecutando en tu propia pc puedes utilizar el ambiente local
 1. Environment Local [here](#).
 2. Environment Lambda [rate limits](#rate-limits).
-(#endpoints).
+
+### Muy Importante
+es necesario agregar el archivo appsettings.json y añadir la cadena de conexion para probar en local...
+```json
+{
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft.AspNetCore": "Warning"
+    }
+  },
+  "AllowedHosts": "*",
+  "ConnectionStrings": {
+    "PosgreSQLConnString": "Server=127.0.0.0;Port=5432;Database=upch_test_db;Username=root;Password=root"
+  }
+}
+```
 
 ## Endpoints
 
