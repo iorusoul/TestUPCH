@@ -1,0 +1,21 @@
+
+{
+    "region" : "us-east-2",
+    "profile" : "aws",
+    "configuration" : "Release",
+    "framework"     : "net6.0",
+    "function-name" : "UpchTest",
+    "function-description" : "lambda",
+    "package-type"         : "Zip",
+    "function-handler"     : "upch.test",
+    "function-memory-size" : 512,
+    "function-role"        : "arn:aws:iam::183631317690:role/service-role/UpchTest-role-1dp0i2ut",
+    "function-timeout"     : 15,
+    "function-runtime"     : "dotnet6",
+    "function-architecture" : "x86_64",
+    "function-subnets"      : "",
+    "function-security-groups" : "",
+    "tracing-mode"             : "PassThrough",
+    "environment-variables"    : "",
+    "image-tag"                : ""
+}

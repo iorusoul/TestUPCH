@@ -13,9 +13,9 @@ namespace upch.test
 
             respuesta.TieneError = true;
             respuesta.CodigoError = "error"; //Deberiamos guardar en el logger el detalle - TO-DO
-#if DEBUG //solo mostramos el stack trace en depuracion...
+//#if DEBUG //solo mostramos el stack trace en depuracion...
             respuesta.MensajeError = ex.Message;
-#endif
+//#endif
             //return respuesta.ToOkObjectResult();
             return new ContentResult
             {
