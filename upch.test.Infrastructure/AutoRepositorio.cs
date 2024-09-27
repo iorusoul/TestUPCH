@@ -52,7 +52,7 @@ namespace upch.test.Infrastructure
                 using (var connection = new NpgsqlConnection(_cadenaConexion.ConnString))
                 {
                     dbConnection.Open();
-                    connection.Execute(insertQuery, _nuevoAuto);
+                    await connection.ExecuteAsync(insertQuery, _nuevoAuto);
                 }
             }
 
@@ -106,7 +106,7 @@ namespace upch.test.Infrastructure
             {
                 dbConnection.Open();
                 // Ejecutar la consulta y pasar el objeto con los valores actualizados
-                filasAfectadas = dbConnection.Execute(updateQuery, _dto);
+                filasAfectadas = await dbConnection.ExecuteAsync(updateQuery, _dto);
             }
             return filasAfectadas;
         }
@@ -118,9 +118,9 @@ namespace upch.test.Infrastructure
             {
                 dbConnection.Open();
                 // Ejecutar la consulta y pasar el objeto con los valores actualizados
-                filasAfectadas = dbConnection.Execute(query, new { Id = Id});
+                filasAfectadas = await dbConnection.ExecuteAsync(query, new { Id = Id});
             }
-            return false;
+            return filasAfectadas == 0? false:true;
         }
     }
 }
