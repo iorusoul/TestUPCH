@@ -19,6 +19,7 @@ namespace upch.test.Infrastructure
 
         public async ValueTask<Auto?> Crear(Auto? _nuevoAuto) 
         {
+            var idNueva = -1;
             using (var dbConnection = new NpgsqlConnection(_cadenaConexion.ConnString))
             {
                 // Realiza una consulta con Dapper
@@ -48,14 +49,16 @@ namespace upch.test.Infrastructure
                     @Marca, 
                     @Modelo, 
                     @Kilometraje, 
-                    @Anio);";//ojo es una consulta parametrizada para evitar inyecciones sql
+                    @Anio) 
+                    RETURNING id_auto;";//ojo es una consulta parametrizada para evitar inyecciones sql
+                
                 using (var connection = new NpgsqlConnection(_cadenaConexion.ConnString))
                 {
                     dbConnection.Open();
-                    await connection.ExecuteAsync(insertQuery, _nuevoAuto);
+                    idNueva = await connection.QuerySingleAsync<int>(insertQuery, _nuevoAuto);
                 }
             }
-
+            _nuevoAuto.IdAuto = idNueva;
             return _nuevoAuto;
         }
 

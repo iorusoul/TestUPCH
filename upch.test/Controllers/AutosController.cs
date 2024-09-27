@@ -20,7 +20,7 @@ namespace upch.test.Controllers
         }
 
 
-        [HttpGet(Name = "Obtener")]
+        [HttpGet(Name = "obtener")]
         public async Task<IActionResult> ObtenerAsync([FromQuery] int id)
         {
             var respuesta = new RespuestaJson();
@@ -37,7 +37,7 @@ namespace upch.test.Controllers
             }
         }
 
-        [HttpPost(Name = "Crear")]
+        [HttpPost(Name = "crear")]
         public async ValueTask<IActionResult> Crear([FromBody] DTOAuto _dto)
         {
             //validar input...
@@ -56,8 +56,8 @@ namespace upch.test.Controllers
             }
         }
 
-        [HttpPut(Name = "update")]
-        public async Task<IActionResult> UpdateAsync([FromBody] Auto _auto)
+        [HttpPut(Name = "actualizar")]
+        public async Task<IActionResult> ActualizarAsync([FromBody] Auto _auto)
         {
             var respuesta = new RespuestaJson();
             try
@@ -73,8 +73,8 @@ namespace upch.test.Controllers
             }
         }
 
-        [HttpPut( Name = "Delete")]
-        public async Task<IActionResult> DeleteAsync([FromQuery]int id)
+        [HttpDelete( Name = "eliminar")]
+        public async Task<IActionResult> EliminarAsync([FromQuery]int id)
         {
             var respuesta = new RespuestaJson();
             try
