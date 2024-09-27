@@ -1,7 +1,7 @@
 # API Documentación
 ## Overview
 
-El proyecto ha sido creado utilizando el patron CQRS respetando los principios solid y configurado para poder ser desplegado en una funcion lambda con url activada para exponer los endpoints directamente, se han utilizado diversos patrones comunmente usados en la industria y se ha elegido una arquitectura clean. 
+El proyecto ha sido creado utilizando el patron CQRS respetando los principios solid y configurado para poder ser desplegado en una funcion lambda con url activada para exponer los endpoints directamente, se han utilizado diversos patrones comunmente usados en la industria y se ha elegido una arquitectura clean, ademas se ha utilizado el micro ORM dapper para la base de datos. 
 
 ## Contenido
 1. [¿Como Utilizar?](#getting-started)
