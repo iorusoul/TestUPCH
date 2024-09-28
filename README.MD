@@ -22,7 +22,7 @@ La api esta desplegada en AWS con las rutas especificadas en los archivos postma
 2. Environment Lambda [rate limits](#rate-limits).
 
 ### Muy Importante
-es necesario agregar el archivo appsettings.json y añadir la cadena de conexion para probar en local...
+es necesario agregar el archivo appsettings.json y añadir la cadena de conexion para probar en local, este archivo debe crearse en la raiz del proyecto test.upch con el nombre appsettings.json ...
 ```json
 {
   "Logging": {
