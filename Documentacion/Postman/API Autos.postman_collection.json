@@ -1,0 +1,458 @@
+{
+	"info": {
+		"_postman_id": "cb0a8696-8802-455c-b778-f428cd65fbf5",
+		"name": "API Autos",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "38654426"
+	},
+	"item": [
+		{
+			"name": "Autos",
+			"item": [
+				{
+					"name": "Obtener",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{LambdaUrl}}/autos/obtener?id=0",
+							"host": [
+								"{{LambdaUrl}}"
+							],
+							"path": [
+								"autos",
+								"obtener"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "0",
+									"description": "id a consultar"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Obtener | OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{LambdaUrl}}/autos/obtener?id=1",
+									"host": [
+										"{{LambdaUrl}}"
+									],
+									"path": [
+										"autos",
+										"obtener"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "1",
+											"description": "id a consultar"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Length",
+									"value": "198"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 27 Sep 2024 21:33:06 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"IdAuto\": 1,\n    \"CantidadPlazas\": 4,\n    \"TipoCajaCambios\": 1,\n    \"TipoMotor\": 1,\n    \"CantidadPuertas\": 5,\n    \"Peso\": 1500,\n    \"TipoCombustible\": 1,\n    \"Color\": \"Blanco\",\n    \"Marca\": \"Toyota\",\n    \"Modelo\": \"Corolla\",\n    \"Kilometraje\": 0,\n    \"Anio\": 2024\n}"
+						},
+						{
+							"name": "Error",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{LambdaUrl}}/autos/obtener?id=0",
+									"host": [
+										"{{LambdaUrl}}"
+									],
+									"path": [
+										"autos",
+										"obtener"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "0",
+											"description": "id a consultar"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Length",
+									"value": "102"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 27 Sep 2024 21:33:31 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"CodigoError\": \"error\",\n    \"TieneError\": true,\n    \"MensajeError\": \"No existe el auto buscado.\",\n    \"Resultado\": null\n}"
+						}
+					]
+				},
+				{
+					"name": "Crear",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"cantidadPlazas\": 4,\r\n  \"tipoCajaCambios\": 2,\r\n  \"tipoMotor\": 1,\r\n  \"cantidadPuertas\": 5,\r\n  \"peso\": 11000,\r\n  \"tipoCombustible\": 1,\r\n  \"color\": \"negro\",\r\n  \"marca\": \"volvo\",\r\n  \"modelo\": \"f11\",\r\n  \"kilometraje\": 0,\r\n  \"anio\": 2024\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{LambdaUrl}}/autos/crear",
+							"host": [
+								"{{LambdaUrl}}"
+							],
+							"path": [
+								"autos",
+								"crear"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Ok",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"cantidadPlazas\": 4,\r\n  \"tipoCajaCambios\": 2,\r\n  \"tipoMotor\": 1,\r\n  \"cantidadPuertas\": 5,\r\n  \"peso\": 11000,\r\n  \"tipoCombustible\": 1,\r\n  \"color\": \"negro\",\r\n  \"marca\": \"volvo\",\r\n  \"modelo\": \"f11\",\r\n  \"kilometraje\": 0,\r\n  \"anio\": 2024\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{LambdaUrl}}/autos/crear",
+									"host": [
+										"{{LambdaUrl}}"
+									],
+									"path": [
+										"autos",
+										"crear"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Length",
+									"value": "193"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 27 Sep 2024 21:36:06 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"IdAuto\": 9,\n    \"CantidadPlazas\": 4,\n    \"TipoCajaCambios\": 2,\n    \"TipoMotor\": 1,\n    \"CantidadPuertas\": 5,\n    \"Peso\": 11000,\n    \"TipoCombustible\": 1,\n    \"Color\": \"negro\",\n    \"Marca\": \"volvo\",\n    \"Modelo\": \"f11\",\n    \"Kilometraje\": 0,\n    \"Anio\": 2024\n}"
+						}
+					]
+				},
+				{
+					"name": "Actualizar",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"IdAuto\": 11,\r\n    \"CantidadPlazas\": 4,\r\n    \"TipoCajaCambios\": 2,\r\n    \"TipoMotor\": 1,\r\n    \"CantidadPuertas\": 5,\r\n    \"Peso\": 11000,\r\n    \"TipoCombustible\": 1,\r\n    \"Color\": \"rojo\",\r\n    \"Marca\": \"volvo\",\r\n    \"Modelo\": \"f11\",\r\n    \"Kilometraje\": 0,\r\n    \"Anio\": 2024\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{LambdaUrl}}/autos/actualizar",
+							"host": [
+								"{{LambdaUrl}}"
+							],
+							"path": [
+								"autos",
+								"actualizar"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Actualizar|Ok",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"IdAuto\": 9,\r\n    \"CantidadPlazas\": 4,\r\n    \"TipoCajaCambios\": 2,\r\n    \"TipoMotor\": 1,\r\n    \"CantidadPuertas\": 5,\r\n    \"Peso\": 11000,\r\n    \"TipoCombustible\": 1,\r\n    \"Color\": \"rojo\",\r\n    \"Marca\": \"volvo\",\r\n    \"Modelo\": \"f11\",\r\n    \"Kilometraje\": 0,\r\n    \"Anio\": 2024\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{LambdaUrl}}/autos/actualizar",
+									"host": [
+										"{{LambdaUrl}}"
+									],
+									"path": [
+										"autos",
+										"actualizar"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Length",
+									"value": "1"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 27 Sep 2024 21:39:24 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								}
+							],
+							"cookie": [],
+							"body": "1"
+						},
+						{
+							"name": "Actualizar|Error",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"IdAuto\": 0,\r\n    \"CantidadPlazas\": 4,\r\n    \"TipoCajaCambios\": 2,\r\n    \"TipoMotor\": 1,\r\n    \"CantidadPuertas\": 5,\r\n    \"Peso\": 11000,\r\n    \"TipoCombustible\": 1,\r\n    \"Color\": \"rojo\",\r\n    \"Marca\": \"volvo\",\r\n    \"Modelo\": \"f11\",\r\n    \"Kilometraje\": 0,\r\n    \"Anio\": 2024\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{LambdaUrl}}/autos/actualizar",
+									"host": [
+										"{{LambdaUrl}}"
+									],
+									"path": [
+										"autos",
+										"actualizar"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Length",
+									"value": "93"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 27 Sep 2024 21:40:39 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"CodigoError\": \"error\",\n    \"TieneError\": true,\n    \"MensajeError\": \"No existe el auto\",\n    \"Resultado\": null\n}"
+						}
+					]
+				},
+				{
+					"name": "Borrar",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{LambdaUrl}}/autos/eliminar?id=0",
+							"host": [
+								"{{LambdaUrl}}"
+							],
+							"path": [
+								"autos",
+								"eliminar"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "0",
+									"description": "id de auto a eliminar de la BD"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Borrar|error",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{LambdaUrl}}/autos/eliminar?id=0",
+									"host": [
+										"{{LambdaUrl}}"
+									],
+									"path": [
+										"autos",
+										"eliminar"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "0",
+											"description": "id de auto a eliminar de la BD"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Length",
+									"value": "93"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 27 Sep 2024 21:42:29 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"CodigoError\": \"error\",\n    \"TieneError\": true,\n    \"MensajeError\": \"No existe el auto\",\n    \"Resultado\": null\n}"
+						},
+						{
+							"name": "Borrar | Ok",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{LambdaUrl}}/autos/eliminar?id=10",
+									"host": [
+										"{{LambdaUrl}}"
+									],
+									"path": [
+										"autos",
+										"eliminar"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "10",
+											"description": "id de auto a eliminar de la BD"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Length",
+									"value": "4"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 27 Sep 2024 21:42:50 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								}
+							],
+							"cookie": [],
+							"body": "true"
+						}
+					]
+				}
+			]
+		}
+	]
+}
