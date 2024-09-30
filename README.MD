@@ -1,6 +1,7 @@
 ![posgresql]( https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white)![net](https://img.shields.io/badge/.NET-512BD4?style=for-the-badge&logo=dotnet&logoColor=white)![aws](https://img.shields.io/badge/Amazon_AWS-FF9900?style=for-the-badge&logo=amazonaws&logoColor=white)
 
 # API Documentación
+
 ## Overview
 
 El proyecto ha sido creado utilizando el patron CQRS respetando los principios solid y configurado para poder ser desplegado en una funcion lambda con url activada para exponer los endpoints directamente, se han utilizado diversos patrones comunmente usados en la industria y se ha elegido una arquitectura clean, ademas se ha utilizado el micro ORM dapper para la base de datos. 
@@ -17,6 +18,7 @@ El proyecto ha sido creado utilizando el patron CQRS respetando los principios s
 4. [Plantilla de Despliegue AWS](#plantilla-de-despliegue-aws)
 5. [UML](#uml)
 6. [Arquitectura](#arquitectura)
+7. [Contacto](#contacto)
 
 ## ¿Como Utilizar?
 
@@ -59,7 +61,9 @@ Se ha usado el patron de respuesta generica para manejar las respuestas del
 
  ![arquitectura](https://miro.medium.com/v2/resize:fit:678/1*dyEEkN3GHQeg7sA6v22EHw.png)
 
-
+## Contacto
+### Ing. Rusbel Oliver Ruelas Paredes
+### Email : rusbelruelas@gmail.com
 
 
 
