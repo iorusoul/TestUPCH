@@ -18,8 +18,8 @@ El proyecto ha sido creado utilizando el patron CQRS respetando los principios s
 ## ¿Como Utilizar?
 
 La api esta desplegada en AWS con las rutas especificadas en los archivos postman y 2 environment, si estas ejecutando en tu propia pc puedes utilizar el ambiente local
-1. Environment Local [here](#).
-2. Environment Lambda [rate limits](#rate-limits).
+1. Environment Local [aqui](#https://github.com/iorusoul/TestUPCH/tree/main/Documentacion/Postman).
+2. Environment Lambda [aqui](#https://github.com/iorusoul/TestUPCH/tree/main/Documentacion/Postman).
 
 ### Muy Importante
 es necesario agregar el archivo appsettings.json y añadir la cadena de conexion para probar en local, este archivo debe crearse en la raiz del proyecto test.upch con el nombre appsettings.json ...
@@ -48,6 +48,9 @@ Se ha usado el patron de respuesta generica para manejar las respuestas del
 
 ## Plantilla de Despliegue AWS
  adjunto
+
+ ## UML
+ ![uml](https://github.com/iorusoul/TestUPCH/blob/main/Documentacion/test_upch_uml.jpg?raw=true)
 
 
 
